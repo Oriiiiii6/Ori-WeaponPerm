@@ -18,7 +18,6 @@ function CheckDiscordRole(src, cb)
 
     PerformHttpRequest(("https://discord.com/api/guilds/%s/members/%s"):format(Config.DiscordGuildId, discordId), function(errorCode, resultData, resultHeaders)
         if errorCode ~= 200 then
-            print('[Ori-WeaponPerm] Discord API error: ' .. errorCode)
             cb(false)
             return
         end
